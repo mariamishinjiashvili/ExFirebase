@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css">
-<title>The PSU Abington Boat Building Project</title>
+  <link rel="stylesheet" href="style.css">
+  <title>The PSU Abington Boat Building Project</title>
 </head>
 <body>
-  <script src="test.js"></script> 
 <h1 style="text-align: center">
     The PSU Abington Boat Building Project</h1>
 <h2 style="text-align: center">"Insert tagline and header image here"</h2>
@@ -15,12 +14,15 @@
     <button class="tablinks" onclick="openTab(event, 'Blog')">Blog</button>
     <button class="tablinks" onclick="openTab(event, 'Archive')">Archive</button>
     <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
-  </div>
-  <div style="text-align: left;" id="SignIn" class="tabcontent">
+    <button class="tablinks" onclick="openTab(event, 'SignIn')">Sign In</button>
+</div>
+
+<!-- Sign In Tab -->
+<div style="text-align: left;" id="SignIn" class="tabcontent">
     <h3>Sign In</h3>
     <form onsubmit="return handleSignIn(event)">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
         
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" required><br><br>
@@ -29,28 +31,28 @@
     </form>
     <p id="signinMessage" style="color: green; font-weight: bold;"></p>
 </div>
-  
-  <div style="text-align: left;" id="Home" class="tabcontent">
+
+<div style="text-align: left;" id="Home" class="tabcontent">
     <h3>Home</h3>
     <p>Add home page content here</p>
-  </div>
+</div>
 
-  <div style="text-align: left;" id="Blog" class="tabcontent">
+<div style="text-align: left;" id="Blog" class="tabcontent">
     <h3>Current Project Blog</h3>
     <p>Add current blog posts here</p>
-  </div>
-  
-  <div style="text-align: left;" id="Archive" class="tabcontent">
+</div>
+
+<div style="text-align: left;" id="Archive" class="tabcontent">
     <h3>Previous Project Blog Posts + Gallery Images</h3>
     <p>Add any old blog posts and gallery images here</p>
-  </div>
-  
-  <div style="text-align: left;" id="Contact" class="tabcontent">
+</div>
+
+<div style="text-align: left;" id="Contact" class="tabcontent">
     <h3>Contact Information</h3>
     <p>Add Professor Thompson and student bios here</p>
-  </div>
-<!-- At the bottom of your HTML body -->
-<script type="module" src="firebase"></script>
+</div>
 
+<!-- Import Firebase logic -->
+<script type="module" src="firebase.js"></script>  <!-- 👈 make sure this matches your file name -->
 </body>
 </html>
