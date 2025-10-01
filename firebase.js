@@ -15,3 +15,25 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Sign-in handler
+window.handleSignIn = async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const pass = document.getElementById("password").value;
+
+    try {
+        await signInWithEmailAndPassword(auth, email, pass);
+        document.getElementById("signinMessage").innerText = "✅ Sign-in successful!";
+
+        // Switch to Welcome tab
+        document.getElementById("SignIn").style.display = "none";
+        document.getElementById("Welcome").style.display = "block";
+
+    } catch (error) {
+        document.getElementById("signinMessage").innerText = "❌ " + error.message;
+        document.getElementById("signinMessage").style.color = "red";
+    }
+};
