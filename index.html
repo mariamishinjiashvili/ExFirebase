@@ -1,78 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #89f7fe, #66a6ff);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      text-align: center;
-      width: 300px;
-    }
-    h1 {
-      color: #333;
-    }
-    input {
-      width: 100%;
-      padding: 0.7rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    button {
-      width: 100%;
-      padding: 0.8rem;
-      margin-top: 1rem;
-      background: #66a6ff;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #4d8be8;
-    }
-  </style>
+<link rel="stylesheet" href="style.css">
+<title>The PSU Abington Boat Building Project</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Sign In</h1>
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="password" id="password" placeholder="Password" required>
-    <button onclick="signIn()">Sign In</button>
-    <p id="message" style="color:red; margin-top:1rem;"></p>
+  <script src="test.js"></script> 
+<h1 style="text-align: center">
+    The PSU Abington Boat Building Project</h1>
+<h2 style="text-align: center">"Insert tagline and header image here"</h2>
+
+<div style="text-align: center;" class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+    <button class="tablinks" onclick="openTab(event, 'Blog')">Blog</button>
+    <button class="tablinks" onclick="openTab(event, 'Archive')">Archive</button>
+    <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+  </div>
+  
+  <div style="text-align: left;" id="Home" class="tabcontent">
+    <h3>Home</h3>
+    <p>Add home page content here</p>
   </div>
 
-  <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  <div style="text-align: left;" id="Blog" class="tabcontent">
+    <h3>Current Project Blog</h3>
+    <p>Add current blog posts here</p>
+  </div>
+  
+  <div style="text-align: left;" id="Archive" class="tabcontent">
+    <h3>Previous Project Blog Posts + Gallery Images</h3>
+    <p>Add any old blog posts and gallery images here</p>
+  </div>
+  
+  <div style="text-align: left;" id="Contact" class="tabcontent">
+    <h3>Contact Information</h3>
+    <p>Add Professor Thompson and student bios here</p>
+  </div>
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyA93kGndvJF7ur2I9DueMpqlNhjOWzl-b8",
-    authDomain: "myfrontendauth1.firebaseapp.com",
-    projectId: "myfrontendauth1",
-    storageBucket: "myfrontendauth1.firebasestorage.app",
-    messagingSenderId: "568504315895",
-    appId: "1:568504315895:web:1e7ddb91a27296d4e248f2"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
+</body>
+</html>
