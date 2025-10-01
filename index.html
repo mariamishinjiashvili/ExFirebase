@@ -54,6 +54,23 @@
     <h3>Contact Information</h3>
     <p>Add Professor Thompson and student bios here</p>
 </div>
+function openTab(evt, tabName) {
+  // Hide all tab contents
+  const tabcontent = document.getElementsByClassName("tabcontent");
+  for (let i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove "active" class from all buttons
+  const tablinks = document.getElementsByClassName("tablinks");
+  for (let i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the selected tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 
 <!-- Import Firebase logic -->
 <script type="module" src="firebase.js"></script>  <!-- 👈 make sure this matches your file name -->
