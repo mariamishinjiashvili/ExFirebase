@@ -2,39 +2,57 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
-  <script type="module" src="firebase.js"></script>
+  <script type="module" src="firebase.js" > </script>
 
   <title>The PSU Abington Boat Building Project</title>
 </head>
 <body>
 <h1 style="text-align: center">
     The PSU Abington Boat Building Project</h1>
-<h2 style="text-align: center">"Insert tagline and header image here"</h2>
 
 <div style="text-align: center;" class="tab">
     <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
     <button class="tablinks" onclick="openTab(event, 'Blog')">Blog</button>
     <button class="tablinks" onclick="openTab(event, 'Archive')">Archive</button>
     <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
-    <button class="tablinks" onclick="openTab(event, 'SignIn')">Sign In</button> 
 </div>
 
-
-<!-- Sign In Tab -->
 <div style="text-align: left;" id="SignIn" class="tabcontent">
     <h3>Sign In</h3>
-    <form onsubmit="return handleSignIn(event)">
+    <form onsubmit="handleSignIn(event)">
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br><br>
         
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" required><br><br>
         
-        <button type="submit">Sign In</button>
+        <button type = "submit">Sign in</button>
     </form>
     <p id="signinMessage" style="color: green; font-weight: bold;"></p>
 </div>
+<div style="text-align: left;" id="Register" class="tabcontent">
+  <form onsubmit="handleRegister(event)">
+    <!--<label for="firstname">First Name:</label><br>
+    <input type="text" id="firstname" name="firstname" required><br><br>
+    *Name will be useful later*
+    <label for="lastname">Last Name:</label><br>
+    <input type="text" id="lastname" name="lastname" required><br><br>
+  --> 
+    <label for="registeremail">Email:</label><br>
+    <input type="email" id="registeremail" name="email" required><br><br>
+        
+    <label for="registerpassword">Password:</label><br>
+    <input type="password" id="registerpassword" name="password" required><br><br>
+        
+    <button type="submit">Register</button>
+  </form>
 
+  <p id="signinMessageR" style="color: rgb(240, 88, 113); font-weight: bold;"></p>
+</div>
+
+
+
+<!--
 <div style="text-align: left;" id="Home" class="tabcontent">
     <h3>Home</h3>
     <p>Add home page content here</p>
@@ -53,26 +71,7 @@
 <div style="text-align: left;" id="Contact" class="tabcontent">
     <h3>Contact Information</h3>
     <p>Add Professor Thompson and student bios here</p>
-</div>
-function openTab(evt, tabName) {
-  // Hide all tab contents
-  const tabcontent = document.getElementsByClassName("tabcontent");
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
+-->
 
-  // Remove "active" class from all buttons
-  const tablinks = document.getElementsByClassName("tablinks");
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the selected tab
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-<!-- Import Firebase logic -->
-<script type="module" src="firebase.js"></script>  <!-- 👈 make sure this matches your file name -->
 </body>
 </html>
